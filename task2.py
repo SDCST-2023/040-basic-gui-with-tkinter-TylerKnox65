@@ -1,0 +1,53 @@
+import tkinter as t
+
+window = t.Tk()
+window.title("T-Town Veterinary Clinic Database")
+window.geometry("500x175")
+dogphoto = t.PhotoImage(file="dog.png")
+dog = t.Label(window, image=dogphoto)
+searchButton = t.Button(window, text="Search by Name")
+searchbox = t.Entry(window, width=20)
+CText = t.Label(window, text="Client DataBase", font=("calibri", 15))
+name = t.Label(window, text="Name")
+TypeText = t.Label(window, text="Type")
+breed = t.Label(window, text="Breed")
+owner = t.Label(window, text="Owner")
+birth = t.Label(window, text="Birthdate")
+
+padding = t.Label(window, text="    ")
+padding2 = t.Label(window, text="    ")
+padding3 = t.Label(window, text="    ")
+
+search1 = t.Entry(window, width=15)
+search2 = t.Entry(window, width=15)
+search3 = t.Entry(window, width=15)
+search4 = t.Entry(window, width=15)
+search5 = t.Entry(window, width=15)
+
+prev = t.Button(window, text="< Previous")
+save = t.Button(window, text="Save Entry")
+next = t.Button(window, text="Next >")
+
+dog.grid(row=1, column=1)
+searchButton.place(x=250, y=1)
+searchbox.place(x=360, y=1)
+CText.place(x=180, y=50)
+name.grid(row=3, column=1)
+TypeText.grid(row=3, column=2)
+breed.grid(row=3, column=3)
+owner.grid(row=3, column=4)
+birth.grid(row=3, column=5)
+
+search1.grid(row=4, column=1)
+search2.grid(row=4, column=2)
+search3.grid(row=4, column=3)
+search4.grid(row=4, column=4)
+search5.grid(row=4, column=5)
+
+
+prev.grid(row=6, column=1)
+padding.grid(row=6, column=2)
+save.grid(row=6, column=3)
+padding2.grid(row=6, column=4)
+next.grid(row=6, column=5)
+window.mainloop()
